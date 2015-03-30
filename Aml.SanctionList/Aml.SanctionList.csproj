@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F01FBC63-45DD-4DD7-892F-C289A6EE275A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Xelion.Aml.SanctionList</RootNamespace>
+    <AssemblyName>Xelion.Aml.SanctionList</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApiConfiguration.cs" />
+    <Compile Include="EuDataSource.cs" />
+    <Compile Include="EuSanctionList.cs" />
+    <Compile Include="FseDataSource.cs" />
+    <Compile Include="FseSanctionList.cs" />
+    <Compile Include="ISanctionList.cs" />
+    <Compile Include="ISLDataSource.cs" />
+    <Compile Include="ListType.cs" />
+    <Compile Include="Model\EuBirth.cs" />
+    <Compile Include="Model\EuCitizen.cs" />
+    <Compile Include="Model\IEntity.cs" />
+    <Compile Include="Model\EuEntity.cs" />
+    <Compile Include="Model\EuName.cs" />
+    <Compile Include="Model\SdnDateOfBirthList.cs" />
+    <Compile Include="Model\SdnPlaceOfBirthList.cs" />
+    <Compile Include="Model\SdnAddressList.cs" />
+    <Compile Include="Model\SdnAkaList.cs" />
+    <Compile Include="Model\SdnEntity.cs" />
+    <Compile Include="Model\SdnIdList.cs" />
+    <Compile Include="Model\SdnProgramList.cs" />
+    <Compile Include="Model\UePassport.cs" />
+    <Compile Include="PlcDataSource.cs" />
+    <Compile Include="PlcSanctionList.cs" />
+    <Compile Include="SanctionListBase.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SdnDataSource.cs" />
+    <Compile Include="SdnSanctionList.cs" />
+    <Compile Include="SlDataSource.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Aml.LoggingService\Aml.LoggingService.csproj">
+      <Project>{b686aa8e-259d-40ad-b681-2a77a5c3bdb1}</Project>
+      <Name>Aml.LoggingService</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
