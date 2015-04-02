@@ -17,6 +17,6 @@ namespace Aml.SanctionList.Model
         public List<SdnAkaList> akaList { get; set; }
         public List<SdnIdList> idList { get; set; }
         public List<SdnDateOfBirthList> dateOfBirthList { get; set; }
-        public List<SdnProgramList> placeOfBirthList { get; set; }
+        public List<SdnPlaceOfBirthList> placeOfBirthList { get; set; }
     }
 }
