@@ -9,10 +9,6 @@ namespace Aml.SanctionList
 {
     public class EuSanctionList : SanctionListBase
     {
-        public EuSanctionList()
-            : this(new SlDataSource())
-        {
-        }
         /// <summary>
         /// Creates new Api instance
         /// </summary>

@@ -9,10 +9,6 @@ namespace Aml.SanctionList
 {
     public class PlcSanctionList : SanctionListBase
     {
-        public PlcSanctionList()
-            : this(new SlDataSource())
-        {
-        }
         /// <summary>
         /// Creates new Api instance
         /// </summary>

@@ -9,10 +9,6 @@ namespace Aml.SanctionList
 {
     public class FseSanctionList : SanctionListBase
     {
-        public FseSanctionList()
-            : this(new SlDataSource())
-        {
-        }
         /// <summary>
         /// Creates new Api instance
         /// </summary>

@@ -4,15 +4,12 @@ using System.IO;
 using System.Linq;
 using System.Xml.Linq;
 using Aml.SanctionList.Model;
+using Aml.LoggingService;
 
 namespace Aml.SanctionList
 {
     public class SdnSanctionList : SanctionListBase
     {
-        public SdnSanctionList()
-            : this(new SlDataSource())
-        {
-        }
         /// <summary>
         /// Creates new Api instance
         /// </summary>

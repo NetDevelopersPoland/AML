@@ -12,16 +12,11 @@ namespace Aml.SanctionList
     {
         protected ISLDataSource _slDataSource;
         protected ILoggingService _logger;
-        ///// <summary>
-        ///// Creates new Api instance
-        ///// </summary>
-        public SanctionListBase()
-            : this(new SlDataSource(), new LoggingService.LoggingService())
+        protected SanctionListBase() { }
+        public SanctionListBase(ISLDataSource slDataSource)
         {
+            _slDataSource = slDataSource;
         }
-        /// <summary>
-        /// Creates new Api instance
-        /// </summary>
         public SanctionListBase(ISLDataSource slDataSource, ILoggingService logger)
         {
             _slDataSource = slDataSource;
