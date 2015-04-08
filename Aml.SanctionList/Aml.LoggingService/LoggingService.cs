@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using NLog;
 using NLog.Targets;
 using NLog.Config;
+using System.IO;
 
 namespace Aml.LoggingService
 {
@@ -33,7 +34,7 @@ namespace Aml.LoggingService
             fileTarget.Name = "Aml LoggingService";
             fileTarget.CreateDirs = true;
             fileTarget.Layout = "${date} ${level} ${callsite:className=true:includeSourcePath=false:methodName=true} ${message}";
-            fileTarget.FileName = @"C:/logs/Aml/AmlLoggingService.${date:format=yyyy.MM.dd}.log";
+            fileTarget.FileName = Path.Combine(System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location), @"Logs\AmlLoggingService.${date:format=yyyy.MM.dd}.log");
             fileTarget.KeepFileOpen = false;
             fileTarget.Encoding = Encoding.UTF8;
             return fileTarget;
