@@ -51,6 +51,13 @@ namespace Aml.SanctionList
         {
             get { return @"http://www.treasury.gov/resource-center/sanctions/Terrorism-Proliferation-Narcotics/Documents/ns_plc.xml"; }
         }
+		/// <summary>
+		/// URL to Consolidated List that have FSE and PLC lists
+		/// </summary>
+		public static string ConsolidatedDataSourceUrl
+		{
+			get { return @"http://www.treasury.gov/ofac/downloads/consolidated/consolidated.xml"; }
+		}
 
         public static string SdnNamespace = "http://tempuri.org/sdnList.xsd";
         public static string PlcNamespace = "http://tempuri.org/nsplc.xsd";
@@ -59,5 +66,6 @@ namespace Aml.SanctionList
         public static string FseFileName = "Fse";
         public static string SdnFileName = "Sdn";
         public static string PlcFileName = "Plc";
+		public static string ConsolidatedFileName = "Consolidated";
     }
 }

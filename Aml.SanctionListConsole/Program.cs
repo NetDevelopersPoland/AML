@@ -25,6 +25,7 @@ namespace Aml.SanctionListConsole
                 var sdnList = sdnBase.GetActualSanctionList();
                 _logger.LogInfo("Sdn Sanction List finish");
 
+				/*FSE and PLC oryginal lists temporary unavailable (fse and plc records are in consolidated list)
                 _logger.LogInfo("Fse Sanction List start");
                 SanctionListBase fseBase = new SdnSanctionList(new FseDataSource());
                 var fseList = fseBase.GetActualSanctionList();
@@ -33,6 +34,12 @@ namespace Aml.SanctionListConsole
                 _logger.LogInfo("Plc Sanction List start");
                 PlcSanctionList plcBase = new PlcSanctionList(new PlcDataSource());
                 var plcList = plcBase.GetActualSanctionList();
+				*/
+				_logger.LogInfo("Consolidated Sanction List start");
+				SanctionListBase slBase = new ConsolidatedSanctionList(new ConsolidatedDataSource());
+				var consolidatedList = slBase.GetActualSanctionList();
+				_logger.LogInfo("Fse Sanction List finish");
+
                 _logger.LogInfo("Plc Sanction List finish");
             }
             catch(Exception ex)
